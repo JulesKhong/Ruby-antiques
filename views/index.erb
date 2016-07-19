@@ -1,1 +1,13 @@
 <h1>hello world!</h1>
+<div class="row">
+<!-- ROW 1, COLUMN 1 -->
+  <div class="col-sm-3">
+  <h3>Browse our newest antiques:</h3>
+  <% if @products.any?() %>
+  <% @products.each do |product| %>
+      <ul>
+        <li><%= product.name %></li>
+      </ul>
+    </div>
+  </div>
+</div>
