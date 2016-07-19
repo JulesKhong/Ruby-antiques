@@ -1,0 +1,15 @@
+<h3>Point of Sale</h3>
+<p>
+  Select items to complete order:
+</p>
+
+<form class="form-group" action="/checkout" method="post">
+<% if @products.any?() %>
+  <% @products.each do | product | %>
+  <div class="checkbox">
+    <label><input type="checkbox" name="items[]" value="<%= product.id %>"> <%= product.description %></label>
+  </div>
+  <% end %>
+  <button type="submit" name="button" class="btn btn-success">Checkout</button>
+<% end %>
+</form>

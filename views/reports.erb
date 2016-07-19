@@ -1,0 +1,20 @@
+<h1>Sold Items</h1>
+<% if @purchases %>
+  <ul>
+  <% @purchases.each() do |purchase| %>
+    <% purchase.products.each() do |product| %>
+    <li><%= product.description %>, <%= product.price %></li>
+    <% end %>
+  <% end %>
+  </ul>
+
+  <h1>Total Sales : <%= @total %> </h1>
+<% end %>
+
+<form class="form-group" action="/reports" method="post">
+  <label for="start_date">Select Start Date</label>
+  <input type="date" name="start_date" class="form-control">
+  <label for="end_date">Select End Date</label>
+  <input type="date" name="end_date" class="form-control">
+  <button type="submit" class="btn btn-success" name="button">Filter</button>
+</form>
