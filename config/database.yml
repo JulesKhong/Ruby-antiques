@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: antique_development
+
+test:
+  adapter: postgresql
+  database: antique_test
